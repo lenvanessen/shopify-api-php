@@ -30,7 +30,7 @@ abstract class Base extends stdClass
 
     /** @var array[] */
     protected static array $PATHS = [];
-    protected static ?string $LIMIT = null;
+    public static ?string $CALL_LIMIT = null;
 
     protected static string $PRIMARY_KEY = "id";
     protected static ?string $CUSTOM_PREFIX = null;
