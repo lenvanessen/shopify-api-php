@@ -30,6 +30,7 @@ abstract class Base extends stdClass
 
     /** @var array[] */
     protected static array $PATHS = [];
+    protected static ?string $LIMIT = null;
 
     protected static string $PRIMARY_KEY = "id";
     protected static ?string $CUSTOM_PREFIX = null;
@@ -68,6 +69,7 @@ abstract class Base extends stdClass
 
         $saveBody = [static::getJsonBodyName() => $data];
         $response = self::request($method, $method, $this->session, [], [], $saveBody, $this);
+        static::$CALL_LIMIT = $response->getHeader('x-shopify-shop-api-call-limit');
 
         if ($updateObject) {
             $body = $response->getDecodedBody();
