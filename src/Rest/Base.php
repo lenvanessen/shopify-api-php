@@ -210,6 +210,8 @@ abstract class Base extends stdClass
                 break;
         }
 
+        static::$CALL_LIMIT = $response->getHeader('x-shopify-shop-api-call-limit')[0] ?? null;
+
         $statusCode = $response->getStatusCode();
         if ($statusCode < 200 || $statusCode >= 300) {
             $message = "REST request failed";
