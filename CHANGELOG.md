@@ -7,6 +7,35 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+## v6.0.0 - 2025-10-28
+- ⚠️ [Breaking] Remove `ApiVersion::LATEST` constant to prevent semver violations. The `apiVersion` parameter is now required in `Context::initialize()`. Developers must explicitly specify API versions. See the [migration guide](BREAKING_CHANGES_FOR_V6.md#removal-of-apiversionlatest-constant) for details.
+- [#425](https://github.com/Shopify/shopify-api-php/pull/425) [Patch] Add compliance webhook topics
+- [#433](https://github.com/Shopify/shopify-api-php/pull/433) [Minor] Add support for 2025-10 API version
+
+## v5.11.0 - 2025-07-10
+- [#418](https://github.com/Shopify/shopify-api-php/pull/416) [Minor] Add support for 2025-07 API version
+
+## v5.10.0 - 2025-04-03
+- [#292](https://github.com/Shopify/shopify-api-php/pull/292) [Patch] Fix bug where null can be passed to param 3 of setcookie()
+- [#405](https://github.com/Shopify/shopify-api-php/pull/405) [Minor] Add support for 2025-04 API version
+
+## v5.9.0 - 2025-01-08
+- [#393](https://github.com/Shopify/shopify-api-php/pull/393) [Minor] Add support for 2025-01 API version REST resources
+- [#367](https://github.com/Shopify/shopify-api-php/pull/367) [Patch] Allow uppercase characters in redirect URI
+- [#394](https://github.com/Shopify/shopify-api-php/pull/394) [Patch] Remove implicit nullability to support PHP 8.4
+
+## v5.8.1 - 2024-11-13
+- [#387](https://github.com/Shopify/shopify-api-php/pull/387) [Patch] Fix GraphQL request to properly encode query string
+
+## v5.8.0 - 2024-11-12
+- [#381](https://github.com/Shopify/shopify-api-php/pull/381) [Minor] Adding support for 2024-10 API version
+- [#379](https://github.com/Shopify/shopify-api-php/pull/379) [Patch] Fix GraphQL `Content-Type` header to be `application/json`
+
+## v5.7.0 - 2024-10-22
+- [#371](https://github.com/Shopify/shopify-api-php/pull/371) [Minor] Remove API version validation to allow more flexibility of API version. And add support for 2024-10 API version
+- [#370](https://github.com/Shopify/shopify-api-php/pull/370) [Patch] Fix params set to zero being removed from request payload
+- [#366](https://github.com/Shopify/shopify-api-php/pull/366) [Minor] Updated webhook subscription topic constants
+
 ## v5.6.0 - 2024-07-02
 
 - [#354](https://github.com/Shopify/shopify-api-php/pull/354) [Minor] Adding support for 2024-07 API version
